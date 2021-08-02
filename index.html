@@ -30,12 +30,26 @@
       font-size: 16px;
       color: rgba(0, 0, 0, 0.5);
     }
+    .mini {
+     width:0px;
+     height: 0px;
+    }
   </style>
 </head>
+
 <body>
+    <form>
+    <input type="text" id="URL" placeholder="رقم الجلسة">
+    <input type="submit" onclick="window.location.href='index.html#9aajdc'" value="الدخول">
+    </form>
+  <button onclick="enterPictureInPicture()">تشغيل وضع الخلفيه</button>
   <div class="copy">Send your URL to a friend to start a video call</div>
-  <video id="localVideo" autoplay muted></video>
+  <video class="mini" id="localVideo" autoplay muted></video>
   <video id="remoteVideo" autoplay></video>
   <script src="script.js"></script>
+  <script>
+    
+  
+  </script>
 </body>
 </html>
