@@ -118,15 +118,14 @@ if (!location.hash) {
     );
   }
 
-  document.getElementById("localvideo").srcObject = localStream
-  let isAudio = true
-function muteAudio() {
-    isAudio = !isAudio
-    localStream.getAudioTracks()[0].enabled = isAudio
-}
-
-let isVideo = true
-function muteVideo() {
-    isVideo = !isVideo
-    localStream.getVideoTracks()[0].enabled = isVideo
+ myvid = document.getElementById("remoteVideo");
+ function muteVideo() {
+   myvid.muted = true;
+ }
+ function UnmuteVideo() {
+  myvid.muted = false;
+ }
+ var peer = new RTCPeerConnection();
+function Exit() {
+  peer.close();
 }
