@@ -117,4 +117,16 @@ if (!location.hash) {
       onError
     );
   }
-   
+
+  document.getElementById("localvideo").srcObject = localStream
+  let isAudio = true
+function muteAudio() {
+    isAudio = !isAudio
+    localStream.getAudioTracks()[0].enabled = isAudio
+}
+
+let isVideo = true
+function muteVideo() {
+    isVideo = !isVideo
+    localStream.getVideoTracks()[0].enabled = isVideo
+}
